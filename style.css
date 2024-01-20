@@ -31,9 +31,7 @@ body{
     cursor: pointer;
     transition: .2s;
 }
-.btn-abrir-menu{
-    display: none;
-}
+
 h2.titulo{
     color: #fff;
     font-size: 38px;
@@ -49,24 +47,39 @@ button:hover,  form .btn-enviar input:hover{
 
 }
 /* ESTILO DO CABEÇALHO */
-
 header{
-    padding: 40px 4%; 
-    /* paddin para afastar de cima e em baixo 4% para não colar*/
+    padding: 40px 4%;
 }
-
 header > .interface{
     display: flex;
     align-items: center;
     justify-content: space-between;
 
 }
-
 header a{
     color: rgb(105, 105, 105);
     text-decoration: none;
     display: inline-block;
     transition: .2s;
+}
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+    transition: .2s;
+}
+header nav ul{
+    list-style-type: none; 
+}
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* ESTILO DO MENU RESPONSIVO */
+
+header nav.menu-responsivo ul li{
+    display: inline-block;
+    padding: 0 40px;
 }
 
 header nav.menu-responsivo a:hover{
@@ -74,14 +87,9 @@ header nav.menu-responsivo a:hover{
     transform: scale(1.05);
 
 }
-header nav ul{
-    list-style-type: none; 
+.btn-abrir-menu{
+    display: none;
 }
-header nav.menu-responsivo ul li{
-    display: inline-block;
-    padding: 0 40px;
-}
-/* ESTILO DO MENU RESPONSIVO */
 
 .btn-abrir-menu i{
     color: green;
