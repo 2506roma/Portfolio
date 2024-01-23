@@ -46,9 +46,24 @@ button:hover,  form .btn-enviar input:hover{
     transform: scale(1.05);
 
 }
+
+
+
+/* ESTILO ROLAGEM */
+
+header.rolagem{
+    background-color: #fff;
+    padding: 20px 4%;
+}
+
 /* ESTILO DO CABEÇALHO */
 header{
+    width: 100%;
     padding: 40px 4%;
+    position: fixed ;
+    top: 0;
+    left: 0;
+    transition: .5s;
 }
 header > .interface{
     display: flex;
@@ -70,14 +85,14 @@ header a:hover{
 header nav ul{
     list-style-type: none; 
 }
-header nav ul li{
+header nav.menu-desktop.menu-responsivo ul li{
     display: inline-block;
     padding: 0 40px;
 }
 
 /* ESTILO DO MENU RESPONSIVO */
 
-header nav.menu-responsivo ul li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
 }
@@ -156,8 +171,12 @@ header nav.menu-responsivo a:hover{
 
 section.topo-do-site{
     padding: 40px 4%;
+    padding: 200px;
 }
+.topo-do-site .img-topo-site{
 
+    margin-top: 140px;
+}
 section.topo-do-site .flex{
     align-items: center;
     justify-content: center;
