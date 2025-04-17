@@ -1,182 +1,314 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!-- GOOGLEO FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- FIM GOOGLEO FONTS -->
-    <!-- BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- BOOTSTRAP ICONS--FIM -->
-    <script src="menu.js" defer></script>
-    <title>Romario Diogo</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/proprieties.css">
+    <link rel="stylesheet" href="./assets/css/KeyFrames.css">
+    <title>Portfólio</title>
 </head>
 <body>
-    <header id="header">
-        <div class="interface">
-            <div class="logo">
-                <a href="#">
-                    <img src="img/logo.png" alt="logo.sit">
-                </a>
-            </div>
+    
+    <div class="container">
 
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#minhaEspecialidades">Especialidades</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
+        <div class="hamburguer" id="Close-menu">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>Fechar</span>
+        </div>
+
+        <header>
+            <div class="img-wrapper">
+                <img src="./assets/images/backgroundimg.jpg" alt="">
+            </div>
+            <div class="banner">    
+                <h1 class="title-style">Desenvolvedor Python & RPA</h1>  
+                <p>Romário Diogo <br> Desenvolvedor e Analista de Sistemas</p>
+                <p></p>
+                <button class="ButtonCustom" id="button-banner">Saiba mais</button>
+            </div> 
+
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul class="menu">
+                    <li id="menu-1" class="menu-item"><a id="Close-menu" href="#" class="menu-link">home</a></li>
+                    <li id="menu-2" class="menu-item"><a id="Close-menu" href="#conhecimentos" class="menu-link">conhecimentos</a></li>
+                    <li id="menu-3" class="menu-item"><a id="Close-menu" href="#projetos" class="menu-link">projetos</a></li>
+                    <li id="menu-4" class="menu-item"><a id="Close-menu" href="#contato" class="menu-link">contato</a></li>
+                    <li id="menu-5" class="menu-item"><a id="Close-menu" href="#orcamento" class="menu-link">orçamento</a></li>
+                    
+                    
                 </ul>
             </nav>
-            <div class="btn-contato">
-                <a href="#contato">
-                    <button>Contato</button>
-                </a>
+            <div class="social-media">
+                <a id="social-1" href="#"><i class="fab fa-github"></i></a>
+                <a id="social-2" href="#"><i class="fab fa-instagram"></i></a>
+                <a id="social-3" href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="btn-abrir-menu" id="btn-menu">
-                <i class="bi bi-list"></i>
-            </div><!-- btn-abrir-menu -->
-            <div class="menu-responsivo" id="menu-responsivo">
-                <div class="btn-fechar">
-                    <i class="bi bi-x"></i>
-                </div><!-- btn-fechar -->
-                <nav id="menu-responsivo">
-                    <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#minhaEspecialidades">Especialidades</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#projetos">Projetos</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </nav>
-            </div><!-- menu-responsivo -->
-            <div class="overlay-menu" id="overlay-menu">
-                
-            </div><!-- overlay-menu -->
-        </div>
-    </header>
+        </aside>
 
-    <main>
-        <section class="topo-do-site" id="inicio">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-site">
-                        <h1>TRANSFORMANDO IDAIS EM REALIDADE DIGITAL <span>.</span></h1>
-                        <p>Criatividade e inovação andando lado a lado. Com uma combinação única de design impactando, funcionalidade intuitiva e otimização para resultados, estou pronto para criai a prença dos seus sonho.</p>
-
-                        <div class="btn-contato">
-                            <a href="#">
-                                <button>Entre em contato</button>
-                            </a>
-                        </div>
-                    </div> 
-                    <!-- txt-topo-site -->
-                    <div class="img-topo-site">
-                        <img src="img/foto com fundo00.jpg" alt="foto-perfil-flutuante">
+        <section class="sessao-conhecimentos" >
+            <div class="sessao-header"id="conhecimentos">
+                <h1 class="title-style">Conhecimentos</h1>
+            </div>
+            <div class="conhecimentos">
+                <div class="conhecimento" data-anime="left">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quae eligendi molestiae corrupti.</p>
                     </div>
                 </div>
+                <div class="conhecimento" data-anime="right">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>Css</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis consectetur.</p>
+                    </div>
+                </div>
+                <div class="conhecimento" data-anime="left">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-js"></i>
+                        <h3>Javascript</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores placeat non odit.</p>
+                    </div>
+                </div>
+                <div class="conhecimento" data-anime="right">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-react"></i>
+                        <h3>ReactJS</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum unde itaque.</p>
+                    </div>
+                </div>
+                <div class="conhecimento" data-anime="left">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Git e Github</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis!</p>
+                    </div>
+                </div>
+                <div class="conhecimento" data-anime="right">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis</p>
+                    </div>
+                </div>
+                <div class="imagemFundo">
+                    <i class="fa-solid fa-laptop-code"></i>                
+                </div>
+        </section>
+        <section class="sessao-projetos" id="projetos" >
+            <div class="projetos-header">
+                <h1>Projetos</h1>
+            </div>
+            <div class="cards">
+                <div class="card" data-anime="up">
+                    <div class="card-img-wrapper">
+                        <img src="./media/proj1.jpg" alt="">
+                    </div>
+                    <div class="background">
+                        <div class="card-info">
+                            <h2>projeto1</h2>
+                            <h3>HTML, CSS</h3>
+                            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, doloremque maiores. Sequi quam, sit sapiente amet debitis. </P>
+                            <button class="ButtonSend">Saiba mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-anime="up">
+                    <div class="card-img-wrapper">
+                        <img src="./media/proj2.jpg" alt="">
+                    </div>
+                    <div class="background">
+                        <div class="card-info">
+                            <h2>projeto2</h2>
+                            <h3>HTML, CSS</h3>
+                            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur placeat necessitatibus. </P>
+                            <button class="ButtonSend">Saiba mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-anime="up">
+                    <div class="card-img-wrapper">
+                        <img src="./media/proj3.jpg" alt="">
+                    </div>
+                    <div class="background">
+                        <div class="card-info">
+                            <h2>projeto3</h2>
+                            <h3>HTML, CSS</h3>
+                            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis provident debitis. </P>
+                            <button class="ButtonSend">Saiba mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-anime="up">
+                    <div class="card-img-wrapper">
+                        <img src="./media/proj4.jpg" alt="">
+                    </div>
+                    <div class="background">
+                        <div class="card-info">
+                            <h2>projeto4</h2>
+                            <h3>HTML, CSS</h3>
+                            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum velit voluptatibus facilis eaque, nulla officia placeat. </P>
+                            <button class="ButtonSend">Saiba mais</button>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
-        <section class="especialidades">
-            <div class="interface">
-                <h2 class="titulo" id="minhaEspecialidades">MINHA <span>ESPECIALIDADES.</span></h2>
-                <div class="flex">
-                    <div class="especialidades-box">
-                        <i class="bi bi-code"></i>
-                        <h3>WEBsite</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quibusdam ipsum porro saepe. Expedita nemo reprehenderit quos quasi sed officiis?</p>
-                    </div><!-- especialidades-box -->
-                    <div class="especialidades-box">
-                        <i class="bi bi-cart"></i>
-                        <h3>Loja online</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quibusdam ipsum porro saepe. Expedita nemo reprehenderit quos quasi sed officiis?</p>
-                    </div><!-- especialidades-box -->
-                    <div class="especialidades-box">
-                        <i class="bi bi-wordpress"></i>
-                        <h3>Blog</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quibusdam ipsum porro saepe. Expedita nemo reprehenderit quos quasi sed officiis?</p>
-                    </div><!-- especialidades-box -->
-                    </div><!-- flex -->
-            </div><!-- interface -->
-        </section><!-- especialidades -->
+        
 
-        <section class="sobre" id="sobre">
-            <div class="interface">
-                <div class="flex">
-                    <div class="img-sobre">
-                        <img src="img/Remuve.png" alt="foto.perfil">
-                    </div><!-- img-sobre -->
+        <section class="section-contact" id="contato">
+            <div class="contact-wrapper" data-anime="up">
+                <div class="contact-left"></div>
+                <div class="contact-right">
+                    <h1>contato</h1>
+                    <form class="form-contact">
+                        <div class="input-group">
+                            <input id="nome" type="text" class="field">
+                            <label  for="nome" class="field-label">Nome</label>
+                        </div>
+                        <div class="input-group">
+                            <input id="email" type="email" class="field">
+                            <label for="email" class="field-label">E-mail</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="mensage" class="field"></textarea>
+                            <label for="mensage" class="field-label">Mensagem</label>
+                        </div>
+                        <button class="ButtonCustom" type="send">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
 
-                    <div class="txt-sobre">
-                        <h2>MUITO PRAZER, <span>SOU ROMARIO DIOGO.</span></h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem natus illum magni ducimus minus animi asperiores ipsum voluptatum id ut.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis praesentium, voluptate incidunt minima voluptatum illum eos expedita consequuntur officiis molestias culpa, porro nulla. Illum, obcaecati cumque. Earum repudiandae voluptatem molestias.</p>
 
-                        <div class="btn-social">
-                            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="#"><button><i class="bi bi-youtube"></i></button></a>
-                            <a href="#"><button><i class="bi bi-github"></i></button></a>
-                        </div><!-- btn-social -->
-                    </div><!-- txt-sobre -->
-                </div><!-- flex -->
-            </div><!-- interface -->
-        </section><!-- sobre -->
+        <section class="section-budget" id="orcamento">
+            <div class="box"></div>
+            <div class="budget-wrapper">
+                <div class="header-budget" data-anime="left">
+                    <h1>Faça seu orçamento</h1>
+                </div>
+                
+                <form class="form-budget">
+                    
+                    <div class="qtde-page" data-anime="right" >
+                        <label for="qtde">Quantidade de páginas:</label> 
+                        <input type="number" name="qtde" id="qtde" min="1" max="100"> <br/><br/>
+                        <label for="js">Preciso de um script JS:</label>
+                        <input class="check" checked="" type="checkbox" name="js" id="js"> <br/><br/><br/> 
+                    </div>
+                    
+                    
+                    <div class="group-layout" data-anime="up">
+                        <label>Layout</label> 
+                        <div>
+                            <input type="radio" name="layout" id="layout-sim">
+                            <label for="layout-sim">Sim, preciso de um layout</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="layout" id="layout-nao">
+                            <label for="layout-não">Não preciso de um layout</label>
+                        </div><br/>
+                        
+                        <div>
+                            <label for="prazo">Prazo</label>
+                            <input type="range" name="prazo" id="prazo" min="1" max="10">
+                        </div>
+                        
+                        <div class="btn">
+                            <button type="submit" id="envio-form-orc" class="ButtonCustom">enviar</button>
+                        </div>
+                        
+                        <label id="preco"> R$ 0,00</label>
+                        
+                    </div>
+                     
+                </form>
+        </section> 
 
-        <section class="portfolio" id="projetos">
-            <div class="interface">
+        <footer>
+            <div class="footer--area">
+                <div class="footer--item area1">
+                    <div class="footer-social">
+                        <a href=""><img src="assets/images/twitter.png" /></a>
+                        <a href=""><img src="assets/images/linkedin.png" /></a>
+                        <a href=""><img src="assets/images/facebook.png" /></a>
+                        <a href=""><img src="assets/images/googleplus.png" /></a>
+                        <a href=""><img src="assets/images/pinterest.png" /></a>
+                    </div>
+                </div>
+                <div class="footer--item area2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique esse aperiam tempora ad molestias expedita reprehenderit aliquam, earum optio inventore quos! Quos porro voluptas itaque ratione enim esse blanditiis reprehenderit.</p>
+                </div>
+                <div class="footer--item area3">
+                    <form method="POST" id="send-email">
+                        <input id="email" type="email" name="email" placeholder="EMAIL TO SUBSCRIBE" autocomplete="email" />
+                        <button class="button" form="send-email">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+            
 
-                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
-                <div class="flex">
-                    <!--tamanho das imagens do site 1920 de largura  6137 de altura-->
-                    <div class="img-port" style="background-image: url(img/gloobo.png);">
-                        <div class="ouverlay">Projeto01</div>
-                    </div><!-- img port -->
-                    <div class="img-port" style="background-image: url(img/microsoft.png);">
-                        <div class="ouverlay">Projeto02</div></div><!-- img port -->
-                    <div class="img-port" style="background-image: url(img/tesla.png);">
-                        <div class="ouverlay">Projeto03</div>
-                    </div><!-- img port -->
-                </div><!-- flex -->
-            </div><!-- interface -->
-        </section><!-- portfolio -->
-        <section class="formulario">
-            <div class="interface">
-               <h2 class="titulo">FALA <span>COMIGO.</span></h2> 
+        
 
-               <form action="">
-                <input type="text" name="" id="" placeholder="Seu nome completo:" required>
-                <input type="text" name="" id="" placeholder="Seu e-mail:"required>
-                <input type="text" name="" id="" placeholder="Seu celular:">
-                <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-                <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-               </form>
-            </div><!-- interface -->
-        </section><!-- formulario -->
-    </main>
 
-    <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img src="img/Logo.png" alt="">
-                    </div><!-- logo-footer -->
-                    <div class="btn-social">
-                        <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
-                        <a href="#"><button><i class="bi bi-youtube"></i></button></a>
-                        <a href="#"><button><i class="bi bi-github"></i></button></a>
-                    </div><!-- btn-social -->
-                </div><!-- flex -->
-            </div><!-- line-footer -->
-            <div class="line-footer borda" id="contato">
-                <p><i class="bi bi-envelope-fill"></i><a href="mailto:romariodiogo2021@gmail.com">romariodiogo2021@gmail.com</a></p>
-            </div><!-- line-footer -->
-        </div><!-- interface -->
-    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
+
+
