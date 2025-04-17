@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/proprieties.css">
     <link rel="stylesheet" href="./assets/css/KeyFrames.css">
     <title>Portfólio</title>
@@ -29,14 +30,38 @@
                 <img src="./assets/images/backgroundimg.jpg" alt="">
             </div>
             <div class="banner">    
-                <h1 class="title-style">Desenvolvedor Python & RPA</h1>  
-                <p>Romário Diogo <br> Desenvolvedor e Analista de Sistemas</p>
+                <h1 class="title-style">Desenvolvedor Python &  <span id="skills"></span></h1>
+                <p>Romário Diogo</p>
                 <p></p>
                 <button class="ButtonCustom" id="button-banner">Saiba mais</button>
             </div> 
 
         </header>
+        
+        <section id="habilidades" class="secao-habilidades">
+            <div class="habilidades-esquerda">
+              <h2>MINHAS HABILIDADES E COMPETÊNCIAS</h2>
+              <p>
+                Prefiro não ranquear habilidades por nível, então deixo aqui o tempo de prática com cada uma:
+              </p>
+              <div class="barra-habilidade"><span>4 ANOS</span><div><div style="width: 80%;"></div></div><strong>HTML</strong></div>
+              <div class="barra-habilidade"><span>4 ANOS</span><div><div style="width: 80%;"></div></div><strong>CSS</strong></div>
+              <div class="barra-habilidade"><span>3 ANOS</span><div><div style="width: 75%;"></div></div><strong>Python</strong></div>
+              <div class="barra-habilidade"><span>3 ANOS</span><div><div style="width: 72%;"></div></div><strong>Automação</strong></div>
+              <div class="barra-habilidade"><span>3 ANOS</span><div><div style="width: 70%;"></div></div><strong>RPA com Python</strong></div>
+              <div class="barra-habilidade"><span>2 ANOS</span><div><div style="width: 65%;"></div></div><strong>Machine Learning</strong></div>
+              <div class="barra-habilidade"><span>1 ANOS</span><div><div style="width: 50%;"></div></div><strong>APIs com Flask</strong></div>
+              <div class="barra-habilidade"><span>1 ANOS</span><div><div style="width: 45%;"></div></div><strong>Dashboards</strong></div>
+              <div class="barra-habilidade"><span>1 ANO</span><div><div style="width: 30%;"></div></div><strong>Interfaces com Flet</strong></div>
 
+            </div>
+          
+            <div class="habilidades-direita">
+                <img src="assets/images/foto.png" alt="Romário Diogo" class="img-perfil" />
+            </div>
+            </div>
+          </section>
+          
         <aside class="sidebar">
             <nav>
                 <ul class="menu">
@@ -67,34 +92,23 @@
                         <h3>HTML</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quae eligendi molestiae corrupti.</p>
                     </div>
                 </div>
                 <div class="conhecimento" data-anime="right">
                     <div class="conhecimento-header">
                         <i class="fab fa-css3-alt"></i>
-                        <h3>Css</h3>
+                        <h3>CSS</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis consectetur.</p>
                     </div>
                 </div>
-                <div class="conhecimento" data-anime="left">
-                    <div class="conhecimento-header">
-                        <i class="fab fa-js"></i>
-                        <h3>Javascript</h3>
-                    </div>
-                    <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores placeat non odit.</p>
-                    </div>
-                </div>
+                
                 <div class="conhecimento" data-anime="right">
                     <div class="conhecimento-header">
-                        <i class="fab fa-react"></i>
-                        <h3>ReactJS</h3>
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum unde itaque.</p>
                     </div>
                 </div>
                 <div class="conhecimento" data-anime="left">
@@ -103,18 +117,9 @@
                         <h3>Git e Github</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis!</p>
                     </div>
                 </div>
-                <div class="conhecimento" data-anime="right">
-                    <div class="conhecimento-header">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
-                    </div>
-                    <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis</p>
-                    </div>
-                </div>
+
                 <div class="imagemFundo">
                     <i class="fa-solid fa-laptop-code"></i>                
                 </div>
@@ -218,27 +223,42 @@
                 <form class="form-budget">
                     
                     <div class="qtde-page" data-anime="right" >
-                        <label for="qtde">Quantidade de páginas:</label> 
-                        <input type="number" name="qtde" id="qtde" min="1" max="100"> <br/><br/>
-                        <label for="js">Preciso de um script JS:</label>
-                        <input class="check" checked="" type="checkbox" name="js" id="js"> <br/><br/><br/> 
+                        <input type="checkbox" name="tipoProjeto" value="rpa" id="rpa">
+                        <label for="rpa">Automação de tarefas</label><br/>
+
+                        <input type="checkbox" name="tipoProjeto" value="dashboard" id="dashboard">
+                        <label for="dashboard">Dashboard interativo</label><br/>
+                      
+                        <input type="checkbox" name="tipoProjeto" value="analise" id="analise">
+                        <label for="analise">Análise de dados</label><br/>
+                      
+                        <input type="checkbox" name="tipoProjeto" value="bot" id="bot">
+                        <label for="bot">Bot ou script inteligente</label><br/>
+                      
+                        <input type="checkbox" name="tipoProjeto" value="scraping" id="scraping">
+                        <label for="scraping">Web scraping</label><br/>
+                      
+                        <input type="checkbox" name="tipoProjeto" value="api" id="api">
+                        <label for="api">API ou integração</label>
+
+                     
                     </div>
                     
                     
                     <div class="group-layout" data-anime="up">
-                        <label>Layout</label> 
+                        <label>Precisa de interface (ex: dashboard)?</label> 
                         <div>
                             <input type="radio" name="layout" id="layout-sim">
-                            <label for="layout-sim">Sim, preciso de um layout</label>
+                            <label for="layout-sim">Sim, preciso </label>
                         </div>
                         <div>
                             <input type="radio" name="layout" id="layout-nao">
-                            <label for="layout-não">Não preciso de um layout</label>
+                            <label for="layout-não">Não preciso </label>
                         </div><br/>
                         
                         <div>
                             <label for="prazo">Prazo</label>
-                            <input type="range" name="prazo" id="prazo" min="1" max="10">
+                            <input type="range" name="prazo" id="prazo" min="1" max="10" value="1">
                         </div>
                         
                         <div class="btn">
@@ -256,21 +276,15 @@
             <div class="footer--area">
                 <div class="footer--item area1">
                     <div class="footer-social">
-                        <a href=""><img src="assets/images/twitter.png" /></a>
-                        <a href=""><img src="assets/images/linkedin.png" /></a>
-                        <a href=""><img src="assets/images/facebook.png" /></a>
-                        <a href=""><img src="assets/images/googleplus.png" /></a>
-                        <a href=""><img src="assets/images/pinterest.png" /></a>
+
+                        <a href="https://www.linkedin.com/feed/" target="_blank">
+                            <img src="assets/images/linkedin.png" alt="LinkedIn de Romário" />
+                        </a>
+                          
+                        <a href="https://github.com/2506roma" target="_blank">
+                            <img src="assets/images/github.png" alt="GitHub de Romário" />
+                        </a>
                     </div>
-                </div>
-                <div class="footer--item area2">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique esse aperiam tempora ad molestias expedita reprehenderit aliquam, earum optio inventore quos! Quos porro voluptas itaque ratione enim esse blanditiis reprehenderit.</p>
-                </div>
-                <div class="footer--item area3">
-                    <form method="POST" id="send-email">
-                        <input id="email" type="email" name="email" placeholder="EMAIL TO SUBSCRIBE" autocomplete="email" />
-                        <button class="button" form="send-email">Subscribe</button>
-                    </form>
                 </div>
             </div>
         </footer>

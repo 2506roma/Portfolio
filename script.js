@@ -6,35 +6,11 @@ document.querySelectorAll("#Close-menu").forEach(function(element) {
     })
 })
 
-
-
-// orçamento
-document.querySelector("#qtde").addEventListener("change", atualizarPreco)
-document.querySelector("#js").addEventListener("change", atualizarPreco)
-document.querySelector("#layout-sim").addEventListener("change", atualizarPreco)
-document.querySelector("#layout-nao").addEventListener("change", atualizarPreco)
-
-document.querySelector("#prazo").addEventListener("change", function () {
-    const prazo = document.querySelector("#prazo").value
-    document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} semanas` 
-    atualizarPreco()
-})
-
-function atualizarPreco(){
-    const qtde = document.querySelector("#qtde").value
-    const temJS = document.querySelector("#js").checked
-    const incluiLayout = document.querySelector("#layout-sim").checked
-    const prazo = document.querySelector("#prazo").value
-
-    let preco = qtde * 100;
-    if (temJS) preco *= 1.1
-    if (incluiLayout) preco += 500
-    let taxaUrgencia = 1 - prazo*0.1;
-    preco *= 1 + taxaUrgencia
-
-    document.querySelector("#preco").innerHTML = `R$ ${preco.toFixed(2)}`
-}
-
+// Saiba mais 
+document.getElementById("button-banner").addEventListener("click", function () {
+    window.location.href = "sobre.html";
+  });
+  
 
 
 //debounce
@@ -80,6 +56,43 @@ if(target.length) {
 
 
 
-
+const skills = [
+    "RPA",
+    "IA",
+    "Previsões",
+    "Automação",
+    "Sites",
+  ];
+  
+  let currentIndex = 0;
+  let charIndex = 0;
+  const skillsElement = document.getElementById("skills");
+  
+  function typeEffect() {
+    const currentSkill = skills[currentIndex];
+    skillsElement.textContent = currentSkill.substring(0, charIndex);
+    charIndex++;
+  
+    if (charIndex <= currentSkill.length) {
+      setTimeout(typeEffect, 100); // velocidade da digitação
+    } else {
+      setTimeout(eraseEffect, 1500); // espera antes de apagar
+    }
+  }
+  
+  function eraseEffect() {
+    const currentSkill = skills[currentIndex];
+    skillsElement.textContent = currentSkill.substring(0, charIndex);
+    charIndex--;
+  
+    if (charIndex >= 0) {
+      setTimeout(eraseEffect, 50); // velocidade para apagar
+    } else {
+      currentIndex = (currentIndex + 1) % skills.length;
+      setTimeout(typeEffect, 500); // espera antes de escrever o próximo
+    }
+  }
+  
+  typeEffect(); // inicia animação
 
 
