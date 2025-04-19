@@ -1,8 +1,6 @@
 
 
 
-https://user-images.githubusercontent.com/92484982/167226091-cb4ee2cb-f797-4ad4-a3bd-378323fbfe74.mp4
-
 
 
 # Projeto: portfólio
