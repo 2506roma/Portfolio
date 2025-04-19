@@ -9,8 +9,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/proprieties.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/KeyFrames.css">
     <title>Portfólio</title>
 </head>
@@ -30,17 +30,19 @@
                 <img src="./assets/images/backgroundimg.jpg" alt="">
             </div>
             <div class="banner">    
-                <h1 class="title-style">Desenvolvedor Python &  <span id="skills"></span></h1>
+                <h1 class="title-style">
+                    <span class="break">Desenvolvedor </span> Python & <span id="skills"></span>
+                </h1>
+                  
                 <p>Romário Diogo</p>
-                <p></p>
-                <button class="ButtonCustom" id="button-banner">Saiba mais</button>
+                <button class="ButtonCustom" id="button-banner" type="button">Saiba mais</button>
             </div> 
 
         </header>
         
         <section id="habilidades" class="secao-habilidades">
             <div class="habilidades-esquerda">
-              <h2>MINHAS HABILIDADES E COMPETÊNCIAS</h2>
+              <h2 >MINHAS HABILIDADES E COMPETÊNCIAS</h2>
               <p>
                 Prefiro não ranquear habilidades por nível, então deixo aqui o tempo de prática com cada uma:
               </p>
@@ -56,12 +58,12 @@
 
             </div>
           
-            <div class="habilidades-direita">
-                <img src="assets/images/foto.png" alt="Romário Diogo" class="img-perfil" />
+            <div class="habilidades-foto">
+                <img src="assets/images/foto.png" alt="Romário Diogo" class="img-perfil" data-anime="zoom" />
             </div>
-            </div>
+            
           </section>
-          
+         
         <aside class="sidebar">
             <nav>
                 <ul class="menu">
@@ -131,13 +133,12 @@
             <div class="cards">
                 <div class="card" data-anime="up">
                     <div class="card-img-wrapper">
-                        <img src="./media/proj1.jpg" alt="">
+                        <video src="assets/videos/automacao.mp4" autoplay muted loop playsinline></video>
                     </div>
                     <div class="background">
                         <div class="card-info">
-                            <h2>projeto1</h2>
-                            <h3>HTML, CSS</h3>
-                            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, doloremque maiores. Sequi quam, sit sapiente amet debitis. </P>
+                            <h2>RPA <br>(Robotic Process Automation)</h2>
+                            <P>Automação inteligente em Python para cadastro de produtos: economiza tempo e evita erros ao preencher dados automaticamente em um sistema web, ideal para e-commerces ou empresas com grande volume de produtos.</P>
                             <button class="ButtonSend">Saiba mais</button>
                         </div>
                     </div>
@@ -202,10 +203,11 @@
                             <label for="email" class="field-label">E-mail</label>
                         </div>
                         <div class="input-group">
-                            <textarea id="mensage" class="field"></textarea>
+                            <textarea id="mensage" class="field" maxlength="1200"></textarea>
+                            <small id="contador-mensagem">0 / 1000</small>
                             <label for="mensage" class="field-label">Mensagem</label>
                         </div>
-                        <button class="ButtonCustom" type="send">Enviar</button>
+                        <button class="ButtonCustom" type="button" onclick="enviarEmail()">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -223,25 +225,27 @@
                 <form class="form-budget">
                     
                     <div class="qtde-page" data-anime="right" >
-                        <input type="checkbox" name="tipoProjeto" value="rpa" id="rpa">
+                        <input type="checkbox" name="tipoProjeto" value="rpa" id="rpa" data-group="orcamento">
                         <label for="rpa">Automação de tarefas</label><br/>
 
-                        <input type="checkbox" name="tipoProjeto" value="dashboard" id="dashboard">
+                        <input type="checkbox" name="tipoProjeto" value="dashboard" id="dashboard" data-group="orcamento">
                         <label for="dashboard">Dashboard interativo</label><br/>
                       
-                        <input type="checkbox" name="tipoProjeto" value="analise" id="analise">
+                        <input type="checkbox" name="tipoProjeto" value="analise" id="analise" data-group="orcamento">
                         <label for="analise">Análise de dados</label><br/>
                       
-                        <input type="checkbox" name="tipoProjeto" value="bot" id="bot">
+                        <input type="checkbox" name="tipoProjeto" value="bot" id="bot" data-group="orcamento">
                         <label for="bot">Bot ou script inteligente</label><br/>
                       
-                        <input type="checkbox" name="tipoProjeto" value="scraping" id="scraping">
+                        <input type="checkbox" name="tipoProjeto" value="scraping" id="scraping" data-group="orcamento">
                         <label for="scraping">Web scraping</label><br/>
                       
-                        <input type="checkbox" name="tipoProjeto" value="api" id="api">
+                        <input type="checkbox" name="tipoProjeto" value="api" id="api" data-group="orcamento">
                         <label for="api">API ou integração</label>
 
-                     
+                        <textarea id="descricao" rows="4" maxlength="1200" style="width: 100%;" placeholder="Explique em detalhes o que você precisa..."></textarea>
+                        <span id="contador-mensagem" class="contador-caracteres">0 / 1000</span>
+                        <p class="aviso">💡 O valor é uma estimativa. Após análise do seu projeto, o orçamento final será ajustado.</p>
                     </div>
                     
                     
@@ -256,10 +260,13 @@
                             <label for="layout-não">Não preciso </label>
                         </div><br/>
                         
-                        <div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
                             <label for="prazo">Prazo</label>
+
                             <input type="range" name="prazo" id="prazo" min="1" max="10" value="1">
+                            <span id="prazo-texto">1 semana(s)</span>
                         </div>
+                          
                         
                         <div class="btn">
                             <button type="submit" id="envio-form-orc" class="ButtonCustom">enviar</button>
@@ -287,38 +294,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
-            
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+        </footer>                   
     </div>
 
     <script src="./script.js"></script>
