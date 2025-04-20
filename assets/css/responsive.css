@@ -73,7 +73,21 @@
     .aviso{
         font-size: 11px;
     }
+    .barra-habilidade span {
+        text-align: left;
+    }
+    .footer--area{
+      background-color: black;
+      margin-top: 40px;
+      height: 30px;
+    }
+    .footer-social a{
+      width: 40px;
+      height: 30px;
+    }
   }
+    
+  
   
   
   /* ========== SMALL DEVICES: até 767px ========== */

@@ -1075,7 +1075,7 @@ footer {
     display:flex;
 }
 .footer--item {
-    flex:1;
+    text-align: left;
 }
 .footer-social {
     display:flex;
