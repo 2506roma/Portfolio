@@ -78,13 +78,13 @@ html {
   /* ===== Animações ===== */
   @keyframes roll {
     100% {
-      transform: translateX(60px) rotate(360deg);
+      transform: translateX(35px) rotate(360deg); /* antes era 60px */
     }
   }
   
   @keyframes rollback {
     0% {
-      transform: translateX(60px) rotate(360deg);
+      transform: translateX(35px) rotate(360deg); /* manter compatível */
     }
     100% {
       transform: translateX(0px) rotate(0deg);
@@ -107,7 +107,7 @@ html {
   @media (max-width: 768px) {
     .spectacledcoder-toggle-container,
     .spectacledcoder-toggle-border {
-      width: 60px;
+      width: 65px;
       height: 20px;
     }
   
@@ -120,6 +120,7 @@ html {
   @media (max-width: 480px) {
     .spectacledcoder-toggle-container,
     .spectacledcoder-toggle-border {
+      padding: 1px;
       width: 50px;
       height: 15px;
     }
@@ -127,8 +128,11 @@ html {
     .spectacledcoder-toggle {
       width: 12px;
       height: 12px;
+      margin-left: 3px; /* ajuste horizontal */
+      transform: translateY(1px); /* ajuste vertical fino */
     }
   }
+  
   
   /* ===== Fundo e seções ===== */
   body {
