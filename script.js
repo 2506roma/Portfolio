@@ -199,31 +199,60 @@ function enviarEmail() {
 
 
 // Limites
-const limiteCaracteres = 1000; // antes era 1200
+const limiteCaracteres = 1000;
 
 // ===== CONTADOR CAMPO "mensage" (contato) =====
 const mensagemInput = document.getElementById("mensage");
 const contadorMensagem = document.getElementById("contador-mensagem");
 
-mensagemInput.addEventListener("input", () => {
-  const total = mensagemInput.value.length;
-  contadorMensagem.textContent = `${total} / ${limiteCaracteres}`;
+if (mensagemInput && contadorMensagem) {
+  mensagemInput.addEventListener("input", () => {
+    const total = mensagemInput.value.length;
+    contadorMensagem.textContent = `${total} / ${limiteCaracteres}`;
   
-  if (total > limiteCaracteres) {
-    mensagemInput.value = mensagemInput.value.substring(0, limiteCaracteres);
-    contadorMensagem.textContent = `${limiteCaracteres} / ${limiteCaracteres}`;
-  }
-});
+    if (total > limiteCaracteres) {
+      mensagemInput.value = mensagemInput.value.substring(0, limiteCaracteres);
+      contadorMensagem.textContent = `${limiteCaracteres} / ${limiteCaracteres}`;
+    }
+  });
+}
 
 // ===== CONTADOR CAMPO "descricao" (orçamento) =====
 const contadorDescricao = document.getElementById("contador-descricao");
 
-descricaoInput.addEventListener("input", () => {
-  const total = descricaoInput.value.length;
-  contadorDescricao.textContent = `${total} / ${limiteCaracteres}`;
+if (descricaoInput && contadorDescricao) {
+  descricaoInput.addEventListener("input", () => {
+    const total = descricaoInput.value.length;
+    contadorDescricao.textContent = `${total} / ${limiteCaracteres}`;
   
-  if (total > limiteCaracteres) {
-    descricaoInput.value = descricaoInput.value.substring(0, limiteCaracteres);
-    contadorDescricao.textContent = `${limiteCaracteres} / ${limiteCaracteres}`;
-  }
+    if (total > limiteCaracteres) {
+      descricaoInput.value = descricaoInput.value.substring(0, limiteCaracteres);
+      contadorDescricao.textContent = `${limiteCaracteres} / ${limiteCaracteres}`;
+    }
+  });
+}
+
+
+
+// ===== Clean Pag =====
+
+document.querySelectorAll('.ButtonCustom').forEach(botao => {
+  botao.addEventListener('click', function () {
+    const formulario = this.closest('form');
+    if (!formulario) return;
+
+    // Delay para aguardar envio ou redirecionamento (caso tenha)
+    setTimeout(() => {
+      formulario.reset(); // Limpa todos os campos
+
+      // Zera contadores, se existirem
+      const contadores = formulario.querySelectorAll('#contador-mensagem, .contador-caracteres');
+      contadores.forEach(contador => {
+        contador.textContent = "0 / 1000";
+      });
+    }, 300); // tempo suficiente para execução de funções como enviarEmail
+  });
 });
+
+
+
