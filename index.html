@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="./assets/css/proprieties.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/KeyFrames.css">
+    <link rel="stylesheet" href="style.css">
+
     <title>Portfólio</title>
 </head>
-<body>
+<body id="bod">
     
     <div class="container">
 
@@ -24,11 +26,10 @@
             <div class="line" id="line3"></div>
             <span>Fechar</span>
         </div>
-
-        <header>
-            <div class="img-wrapper">
-                <img src="./assets/images/backgroundimg.jpg" alt="">
-            </div>
+    
+        <header class="img-wrapper">
+            <div class="bg-img bg-light"></div>
+            <div class="bg-img bg-dark"></div>
             <div class="banner">    
                 <h1 class="title-style">
                     <span class="break">Desenvolvedor </span> Python & <span id="skills"></span>
@@ -37,7 +38,13 @@
                 <p>Romário Diogo</p>
                 <button class="ButtonCustom" id="button-banner" type="button">Saiba mais</button>
             </div> 
-
+            
+            <div class="switch-container spectacledcoder-toggle-container" id="container">
+                <div class="spectacledcoder-toggle-border" id="border">
+                  <div class="spectacledcoder-toggle" id="toggle" onclick="roll()"></div>
+                </div>
+            </div>
+             
         </header>
         
         <section id="habilidades" class="secao-habilidades">
@@ -220,7 +227,7 @@
                             <label for="email" class="field-label">E-mail</label>
                         </div>
                         <div class="input-group">
-                            <textarea id="mensage" class="field" maxlength="1200"></textarea>
+                            <textarea id="mensage" class="field" maxlength="1000"></textarea>
                             <small id="contador-mensagem">0 / 1000</small>
                             <label for="mensage" class="field-label">Mensagem</label>
                         </div>

@@ -255,4 +255,75 @@ document.querySelectorAll('.ButtonCustom').forEach(botao => {
 });
 
 
+// ========= Tema Claro ou Escuro ==========
+let flag = 0;
 
+function roll() {
+  const toggle = document.getElementById("toggle");
+  const bod = document.getElementById("bod");
+
+  if (flag === 0) {
+    toggle.style.animation = "roll 1.5s forwards";
+    bod.classList.add("dark-mode");
+    console.log("🌙 MODO ESCURO ATIVADO");
+
+    toggled(); // 🌙 Lua (modo escuro)
+    localStorage.setItem("tema", "escuro");
+    flag = 1;
+  } else {
+    toggle.style.animation = "rollback 1.5s forwards";
+    bod.classList.remove("dark-mode");
+    console.log("☀️ MODO CLARO ATIVADO");
+
+    togglel(); // ☀️ Sol (modo claro)
+    localStorage.setItem("tema", "claro");
+    flag = 0;
+  }
+}
+
+// 🌙 Estilo de LUA crescente (modo escuro)
+function toggled() {
+  const toggle = document.getElementById("toggle");
+
+  toggle.style.backgroundColor = "#1a1a1a"; // corpo escuro da lua
+  toggle.style.boxShadow = "0px 0px 0px -5px #E18645 inset, 4px 1px 15px #E18645";
+  toggle.style.border = "none";
+  border.style.backgroundColor = "rgb(23, 23, 23)";
+  border.style.boxShadow = "2px 2px 5px rgb(23, 23, 23) inset, -2px -4px 6px rgb(25, 25, 25) inset";
+
+  container.style.boxShadow = "6px 6px 10px rgba(16,16,16,0.667), -2px -3px 8px rgba(32,32,32,0.453), -3px -3px 10px rgb(17,17,17) inset, 8px 8px 30px rgb(26,26,26) inset";
+
+
+}
+
+
+// ☀️ Estilo de SOL (modo claro)
+function togglel() {
+  const toggle = document.getElementById("toggle");
+  toggle.style.backgroundColor = "yellow";
+  toggle.style.boxShadow = "0 0 20px 10px yellow, inset 0 0 0px white";
+  toggle.style.border = "1px solid white";
+  border.style.backgroundColor = "#fff";
+  border.style.boxShadow = "none"; // ✅ remove sombra escura
+  container.style.boxShadow = "0 0 20px 5px none, inset 0 0 10px #ffffff";
+
+
+}
+
+// ✅ Aplica tema salvo ao carregar a página
+window.onload = function () {
+  const saved = localStorage.getItem("tema");
+  const toggle = document.getElementById("toggle");
+  const bod = document.getElementById("bod");
+
+  if (saved === "escuro") {
+    bod.classList.add("dark-mode");
+    flag = 1;
+    toggle.style.animation = "roll 0s forwards";
+    toggled(); // Ativa visual de LUA 🌙
+  } else {
+    flag = 0;
+    toggle.style.animation = "rollback 0s forwards";
+    togglel(); // Ativa visual de SOL ☀️
+  }
+};
